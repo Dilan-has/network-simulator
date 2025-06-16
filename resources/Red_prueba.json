@@ -1,0 +1,82 @@
+{
+    "devices": [
+        {
+            "name": "PC_0",
+            "type": "PC",
+            "x": 100,
+            "y": 100,
+            "config": {
+                "ip": "192.168.0.51",
+                "subnet": "255.255.255.0",
+                "gateway": "",
+                "dns": "",
+                "routing_protocol": "",
+                "ports": "",
+                "vlan": ""
+            }
+        },
+        {
+            "name": "Switch_1",
+            "type": "Switch",
+            "x": 300,
+            "y": 100,
+            "config": {
+                "ip": "",
+                "subnet": "",
+                "gateway": "",
+                "dns": "",
+                "routing_protocol": "",
+                "ports": "",
+                "vlan": ""
+            }
+        },
+        {
+            "name": "Router_2",
+            "type": "Router",
+            "x": 480,
+            "y": 113,
+            "config": {
+                "ip": "192.168.0.50",
+                "subnet": "255.255.255.0",
+                "gateway": "",
+                "dns": "",
+                "routing_protocol": "RIP",
+                "ports": "",
+                "vlan": ""
+            }
+        },
+        {
+            "name": "PC_3",
+            "type": "PC",
+            "x": 649,
+            "y": 163,
+            "config": {
+                "ip": "192.168.0.52",
+                "subnet": "255.255.255.0",
+                "gateway": "",
+                "dns": "",
+                "routing_protocol": "",
+                "ports": "",
+                "vlan": ""
+            }
+        }
+    ],
+    "connections": [
+        {
+            "from": "Router_2",
+            "to": "Switch_1"
+        },
+        {
+            "from": "Switch_1",
+            "to": "PC_0"
+        },
+        {
+            "from": "PC_3",
+            "to": "Router_2"
+        },
+        {
+            "from": "Router_2",
+            "to": "PC_3"
+        }
+    ]
+}
